@@ -7,6 +7,14 @@ import os
 # Step 1: Simulate a target server
 from flask import Flask, request, jsonify
 
+"""
+    This script demonstrates a replay attack PoC using Scapy and Flask.
+    To demonstrate attack run:
+    1. python replay_attack_poc.py server
+    2. python replay_attack_poc.py capture --filter "tcp" --file packets.pcap --duration 20
+    3. python replay_attack_poc.py replay --file packets.pcap
+"""
+
 def start_server():
     app = Flask(__name__)
 
